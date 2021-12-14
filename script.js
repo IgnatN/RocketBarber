@@ -46,7 +46,7 @@ buton.forEach(btn => {
     })
     btn.style.width = '200px';
     btn.style.height = '60px';
-    btn.style.marginTop = '2%';
+    // btn.style.marginTop = '2%';
     btn.style.border = '1px solid #FFFFFF';
     btn.style.background = 'rgba(0, 0, 0, 0.07)';
     btn.style.color = "white";
@@ -129,10 +129,98 @@ title.forEach(h1 => {
     h1.style.fontWeight = '700';
     h1.style.lineHeight = '53px';
     h1.style.letterSpacing = '0.06em'
-    h1.style.marginTop = '4%'
+    h1.style.marginTop = '100px'
     h1.style.color = '#E6E6E6'
 });
 
-/////// Gallery
-let gallery = document.querySelector('.galleryBlocks');
+////// Gallery 
 
+let containersFlex = document.querySelector('.containersFlex')
+class Gallery {
+    constructor(photo1, photo2, photo3, photo4, photo5, photo6) {
+        this.photo1 = photo1;
+        this.photo2 = photo2;
+        this.photo3 = photo3;
+        this.photo4 = photo4;
+        this.photo5 = photo5;
+        this.photo6 = photo6
+    }
+    showGallery() {
+        containersFlex.innerHTML += `<div  class="containerFlex">
+        <div class="div1">
+            <div class="img1 ">
+                <a href="https://www.instagram.com/rocketbarber.md" target="blanck">
+                    <img class="photo1" src="${this.photo1}" alt="">
+                </a>
+            </div>
+            <div class="img2"><a href="https://www.instagram.com/rocketbarber.md" target="blanck">
+                    <img class="photo2" src="${this.photo2}" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="div2">
+            <div class="img1">
+                <a href="https://www.instagram.com/rocketbarber.md" target="blanck">
+                    <img class="photo1" src="${this.photo3}" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="img1">
+                <a href="https://www.instagram.com/rocketbarber.md" target="blanck">
+                    <img class="photo2" src="${this.photo4}" alt="">
+                </a>
+            </div>
+            <div class="img2">
+                <a href="https://www.instagram.com/rocketbarber.md" target="blanck">
+                    <img class="photo1" src="${this.photo5}" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="div4">
+            <div class="img1">
+                <a href="https://www.instagram.com/rocketbarber.md" target="blanck">
+                    <img class="photo1" src="${this.photo6}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>`
+    }
+}
+container1 = new Gallery('./images/gallery/3.jpg', './images/gallery/4.jpg', './images/gallery/5.jpg', './images/gallery/6.jpg', './images/gallery/7.jpg', './images/gallery/8.jpg')
+container1.showGallery();
+container2 = new Gallery('./images/gallery/19.jpg', './images/gallery/10.jpg', './images/gallery/11.jpg', './images/gallery/13.jpg', './images/gallery/12.jpg', './images/gallery/14.jpg')
+container2.showGallery();
+contanier3 = new Gallery('./images/gallery/15.jpg', './images/gallery/16.jpg', './images/gallery/17.jpg', './images/gallery/18.jpg', './images/gallery/20.jpg', './images/gallery/21.jpg')
+contanier3.showGallery();
+
+//// Our Services
+
+let ouerServices = document.querySelector('.services-grid');
+
+class Services {
+    constructor(image, vector, title, button) {
+        this.image = image;
+        this.vector = vector;
+        this.title = title;
+        this.button = button
+    }
+    showServices() {
+        ouerServices.innerHTML += `
+                                          <div class="element">
+                                             <img src="${this.image}" alt="Haircut" class="cover">
+                                                <div class="overlay"></div>
+                                             <img src="${this.vector}" alt="Haircut" class="icon">
+                                                  <div class="title">${this.title}</div>
+                                               <button>${this.button} </button>
+                                        </div>`
+    }
+}
+let service1 = new Services('./images/ourServices/1.png', './images/ourServices/vector1.png', 'Стрижка', 'Записаться')
+service1.showServices();
+let service2 = new Services('./images/ourServices/2.png', './images/ourServices/vector2.png', 'Коррекция бровей', 'Записаться')
+service2.showServices();
+let service3 = new Services('./images/ourServices/3.png', './images/ourServices/vector3.png', 'Мужской маникюр', 'Записаться')
+service3.showServices();
+let service4 = new Services('./images/ourServices/4.png', './images/ourServices/vector4.png', 'Бритье', 'Записаться')
+service4.showServices();
