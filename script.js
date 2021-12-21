@@ -209,6 +209,7 @@ class Services {
         ouerServices.innerHTML += `
                                           <div class="element">
                                              <img src="${this.image}" alt="Haircut" class="cover">
+                                             <img src="${this.image}" alt="Haircut" class="cover">
                                                 <div class="overlay"></div>
                                              <img src="${this.vector}" alt="Haircut" class="icon">
                                                   <div class="title">${this.title}</div>
@@ -224,3 +225,50 @@ let service3 = new Services('./images/ourServices/3.png', './images/ourServices/
 service3.showServices();
 let service4 = new Services('./images/ourServices/4.png', './images/ourServices/vector4.png', 'Бритье', 'Записаться')
 service4.showServices();
+
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('element-show')
+        }
+    });
+}
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element');
+for (let elm of elements) {
+    observer.observe(elm);
+}
+elements[0].style.transition = '2s';
+elements[1].style.transition = '3s';
+elements[2].style.transition = '5s';
+elements[3].style.transition = '6s';
+
+///// Rewiews carousel
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
