@@ -14,7 +14,7 @@ class Block {
                                 <div class="carousel-caption image">
                                 <h1>${this.title}</h1>
                                 <p>${this.text}</p>
-                                <button>${this.button}</button>
+                                <button id="signUp">${this.button}</button>
                            </div>
                          </div>`
     }
@@ -96,28 +96,32 @@ window.addEventListener('scroll', () => {
 ////// OUR Team
 let ourTeam = document.querySelector('.teamBlocks');
 class Team {
-    constructor(photo, name, linkInst, instIcon) {
+    constructor(photo, name, linkInst, instIcon, buttons, linkService) {
         this.photo = photo;
         this.name = name;
         this.linkInst = linkInst;
-        this.instIcon = instIcon
+        this.instIcon = instIcon;
+        this.buttons = buttons;
+        this.linkService = linkService
     }
     showOurTeam() {
         ourTeam.innerHTML += `<div class="blockTeam">
         <div class="photoTeam"><a target="blanck" href="${this.linkInst}">
         <img class="ourTeamImg" src="${this.photo}" alt="">
-        <img class="instIcon" src="${this.instIcon}"> </a></div>
+        <img class="instIcon" src="${this.instIcon}"> </a>
+         <a href="${this.linkService}"><button class="ourTeam">${this.buttons}</button></a></div>
         <p>${this.name}</p>
         </div>`
     }
 }
-let empl1 = new Team('./images/ourTeam1.jpg', 'Raketa', 'https://www.instagram.com/raketa_barber', './images/inst-icon.png')
+
+let empl1 = new Team('./images/ourTeam1.jpg', 'Raketa', 'https://www.instagram.com/raketa_barber', './images/inst-icon.png', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking?employeeId=1502168')
 empl1.showOurTeam();
-let empl2 = new Team('./images/ourTeam2.jpg', 'Raketka', 'https://www.instagram.com/anyaonoiku', './images/inst-icon.png')
+let empl2 = new Team('./images/ourTeam2.jpg', 'Raketka', 'https://www.instagram.com/anyaonoiku', './images/inst-icon.png', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking?employeeId=1502170')
 empl2.showOurTeam();
-let empl3 = new Team('./images/ourTeam3.jpg', 'Daria', 'https://www.instagram.com/dariaonoiku', './images/inst-icon.png')
+let empl3 = new Team('./images/ourTeam3.jpg', 'Daria', 'https://www.instagram.com/dariaonoiku', './images/inst-icon.png', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking?employeeId=1579005')
 empl3.showOurTeam();
-let empl4 = new Team('./images/ourTeam4.jpg', 'Mirel', 'https://www.instagram.com/mirelpirgari', './images/inst-icon.png')
+let empl4 = new Team('./images/ourTeam4.jpg', 'Mirel', 'https://www.instagram.com/mirelpirgari', './images/inst-icon.png', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking?employeeId=1579008')
 empl4.showOurTeam();
 
 let title = document.querySelectorAll('h1');
@@ -199,11 +203,12 @@ contanier3.showGallery();
 let ouerServices = document.querySelector('.services-grid');
 
 class Services {
-    constructor(image, vector, title, button) {
+    constructor(image, vector, title, button, linkService) {
         this.image = image;
         this.vector = vector;
         this.title = title;
-        this.button = button
+        this.button = button;
+        this.linkService = linkService
     }
     showServices() {
         ouerServices.innerHTML += `
@@ -213,18 +218,21 @@ class Services {
                                                 <div class="overlay"></div>
                                              <img src="${this.vector}" alt="Haircut" class="icon">
                                                   <div class="title">${this.title}</div>
-                                               <button>${this.button} </button>
+                                                  <a href="${this.linkService}"><button>${this.button}</button></a>
                                         </div>`
     }
 }
-let service1 = new Services('./images/ourServices/1.png', './images/ourServices/vector1.png', 'Стрижка', 'Записаться')
+let service1 = new Services('./images/ourServices/1.png', './images/ourServices/vector1.png', 'Стрижка', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking?dppub=true&initRecommended=true&offerItems=sv%3A7526314')
 service1.showServices();
-let service2 = new Services('./images/ourServices/2.png', './images/ourServices/vector2.png', 'Коррекция бровей', 'Записаться')
+let service2 = new Services('./images/ourServices/2.png', './images/ourServices/vector2.png', 'Коррекция бровей', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking?dppub=true&offerItems=sv%3A7562246')
 service2.showServices();
-let service3 = new Services('./images/ourServices/3.png', './images/ourServices/vector3.png', 'Мужской маникюр', 'Записаться')
+let service3 = new Services('./images/ourServices/3.png', './images/ourServices/vector3.png', 'Мужской маникюр', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking')
 service3.showServices();
-let service4 = new Services('./images/ourServices/4.png', './images/ourServices/vector4.png', 'Бритье', 'Записаться')
+let service4 = new Services('./images/ourServices/4.png', './images/ourServices/vector4.png', 'Бритье', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking')
 service4.showServices();
+
+Services.prototype
+console.log(Services)
 
 function onEntry(entry) {
     entry.forEach(change => {
@@ -250,25 +258,33 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+        slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
+
+//////// Button http request
+
+document.querySelectorAll('#signUp').forEach(hrt => {
+    hrt.addEventListener('click', () => {
+        window.location.href = 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking'
+    })
+})
