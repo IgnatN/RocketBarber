@@ -53,7 +53,7 @@ header .contacts a{
     .navigation-items a:after {
     display: block; 
     content: "";
-    height: 3px; 
+    height: 1px; 
     width: 0%; 
     background-color: #ffffff; 
     transition: width 0.4s ease-in-out; 
@@ -62,6 +62,109 @@ header .contacts a{
     a:focus:after {
     width: 100%;
     }
+    #menu__toggle {
+        opacity: 0;
+      }
+      
+      #menu__toggle:checked ~ .menu__btn > span {
+    
+    background-color: rgba(231, 111, 0, 1);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::before {
+        background-color: rgba(231, 111, 0, 1);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::after {
+        background-color: rgba(231, 111, 0, 1);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+        backdrop-filter: blur(5px);
+      }
+      
+      .menu__btn {
+        display: none;
+        align-items: center;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+      }
+      .menu__box img{
+          position: relative;
+        top: -10px;       
+         right: -33px;
+          width: 60px;
+          height:30px;
+          margin-bottom: 10px;
+      }
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top:8px;
+      }
+      .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: -32px;   
+        width: 320px;
+        height: 720px;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        backdrop-filter: blur(8px);
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);      
+      }
+      .menu__box a{
+        text-decoration:none;
+        display: inline-block;
+        color:#ffffff;
+        }
+        .menu__box a:after {
+        display: block; 
+        content: "";
+        height: 1px; 
+        width: 0%; 
+        background-color: #ffffff; 
+        transition: width 0.4s ease-in-out; 
+        }
+        .menu__box a:hover:after,
+        a:focus:after {
+        width: 100%;
+        }
+      .menu__item {
+        display: block;
+        margin: 30px 30px;
+        color: white;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 21px;
+        text-decoration: none;
+      }
+      .menu__item:hover {
+          color: white;
+      }
+      .menu__box .tel{
+        margin-top: 151px;
+      }
 @media (max-width:1569px){ 
   
     header .navigation {
@@ -92,7 +195,8 @@ header .contacts a{
 }
 .image_img{
     width: 100%;
-    height:1078px;
+    height:100%;
+    object-fit: cover;
 }
 .image{  
     background:linear-gradient(90deg, rgba(0, 0, 0, 0.63) -4.35%, rgba(0, 0, 0, 0.07) 106.28%);
@@ -106,7 +210,6 @@ header .contacts a{
     align-items: center;
     justify-content: center;
 }
-
 .image h1{
     font-size: 59px;
 }
@@ -131,11 +234,11 @@ header .contacts a{
 
 }
 .vectorMin{
-    flex: 100%;
     position: absolute;
     top:87.8%;
     right:50.68%;
     width:5px;
+    flex: 100%;
     animation: identifier 2s infinite;
 }
 @keyframes identifier {
@@ -635,7 +738,6 @@ position: relative;
     width: 253px;
     border:1px solid #8D8D8D;
     margin-bottom: 45px;
-    
 }
 .aboutUs p{
     display: flex;
@@ -796,9 +898,87 @@ footer a:hover{
     color: white;
 }
 .copyright a{
-    color: #FF8A00;
+    color: rgba(231, 111, 0, 1);
     text-decoration: none;
 }
 .copyright a:hover{
-    color: #FF8A00;
+    color: rgba(231, 111, 0, 1);
+}
+@media only screen and (max-width:1040px){
+.menu__btn{
+    display: block;
+}
+
+header .navigation{
+    display: none;
+}
+header .contacts .tel{
+    display: none;
+}
+header .contacts{
+    gap: 38px
+}
+.vector{
+    right: 49.9%;
+}
+.second-container-welcome{
+    position: relative;
+    right: -132px;
+}
+.second-container-welcome .img-second-block{
+    display: none;
+}
+.teamBlocks{
+    gap: 0;
+}
+.photoTeam{
+    width: 220px;
+    height: 220px;
+    
+}
+.ourTeamImg{
+    width: 82%;
+    height: 82%;
+}
+.block5 .services-grid{
+    grid-column-gap: 12px;
+    grid-row-gap: 40px;
+}
+
+.carousel-inner .images {
+    width: 705px;
+    height: 590px
+}  
+.carousel-inner .images.carousel-item.active  .image_img1{
+    object-position: 0px -217px;
+}
+.carousel-inner .images.images.carousel-item .image_img2{
+    object-position: 0px -150px;
+}
+.block8{
+    background-repeat: no-repeat;
+    background-size: 1119px;
+    background-position: left;
+}
+.pulse{
+    position: relative;
+    right: 400px;
+    top: -25px;
+}
+.rewBlock3 .img8 {
+    position: relative;
+    top: 1px;
+    right: 264px;
+}
+.footer-box .footer-grid{
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px;
+    margin-left: 100px;
+}
+.footer-box {
+  
+    display: grid;
+    grid-template-columns: 148px 1px 835px;
+    margin: auto auto auto 164px;
+}
 }
