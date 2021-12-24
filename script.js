@@ -231,9 +231,6 @@ service3.showServices();
 let service4 = new Services('./images/ourServices/4.png', './images/ourServices/vector4.png', 'Бритье', 'Записаться', 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking')
 service4.showServices();
 
-Services.prototype
-console.log(Services)
-
 function onEntry(entry) {
     entry.forEach(change => {
         if (change.isIntersecting) {
