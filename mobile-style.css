@@ -1,0 +1,389 @@
+@import"/style.css";
+
+@media only screen and (max-width:420px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+   body{
+       width: 100%;
+       height: 522px;
+   }
+    .contacts a img{
+        position: relative;
+        width: 20px;
+        right: -39px;
+         top: 6px;
+    }
+    header .logo{
+        width: 60px;
+        position: relative;
+        right: 190px;
+    }
+.carousel-item{
+    width: 100%;
+    height: auto;
+}
+.contacts {
+    width: 100%;
+    position: relative;
+    right:140px;
+}
+img.vector-face{
+width: 68px;
+}
+.vector, .vectorMin, .line{
+    display: none;
+}
+.image_img {
+    width: 400px;
+    height: 522px;
+    object-fit: cover;
+}
+.image h1{
+    font-size: 29px;
+    width: 290px;
+    height: 34px;
+    text-align: center;
+    position: relative;
+    top: -311px;
+    left: 0px;
+}
+.image p{
+    width: 364px;
+    height: 112px;
+    font-size: 16px;
+    position: relative;
+    top: -316px;
+}
+button{
+    position: relative;
+    top: -226px;
+}
+.menu__box{
+    width: 100%;
+}
+.second-container {
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+    left: -350px;
+}
+.vector-welcome{
+    font-size: 25px;
+    width: 290px;
+}
+.active1 img{
+    width: 95px;
+}
+.active2 img{
+    width: 95px;
+}
+.active3 img{
+    width: 95px;
+}
+.active4 img{
+    width: 95px;
+}
+.bigNumbers{
+    gap: 45px;
+    position: relative;
+    right: -62px;
+}
+.numberContent p{
+   width: 135px;
+   height: 80px;
+font-size: 13px;
+position: relative;
+    right: -25px;
+}
+.ourTeam h1{
+    width: 231px;
+    height: 34px;
+    font-size: 29px;
+}
+.teamBlocks{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 31px;
+}
+.blockTeam{
+    width: 135px;
+    height: 134px;
+    margin-bottom: 22px;
+}
+.blockTeam p {
+    position: relative;
+    top: -13px;
+    right: 0px;
+    font-size: 13px;
+}
+.photoTeam{
+    width: 100%;
+    height: 100%;
+}
+.ourTeam {
+    margin-top: -7px;
+}
+.ourTeam img{
+    margin-top: 0px;
+}
+.instIcon{
+    position: absolute;
+    top: 91px;
+    left: 56px;
+}
+button.ourTeam{
+    width: 90px;
+    font-size: 10px;
+    position: absolute;
+    top: 165px;
+    left: 26px;
+}
+.galleryBlock{
+    margin-top: 5px;
+}
+.galleryBlock h1{
+    margin-top: 50px;
+    width: 118px;
+    height: 34px;
+    font-size: 29px;
+    margin-top: 5px;
+}
+.containersFlex{
+    width: 676px;
+    height: 439px;
+    gap: 10px;
+}
+.containerFlex{
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.div1, .div3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+.div1 .img1{
+    width: 177px;
+    height: 123px;
+  }
+  .div1 .img2{
+    width: 177px;
+    height: 219px;
+  }
+  .div2 .img1, .div4 .img1{
+    width: 257px;
+    height: 355px;
+  }
+  .div3 .img1{
+    width: 212px;
+    height: 218px;
+  }
+  .div3 .img2{
+    width: 212px;
+    height: 123px;
+  }
+  .containerFlex {
+      padding-top: 0px;
+    width: 2467px;
+    height:388px;
+    animation: pulsate 29s infinite alternate;
+    -moz-animation: pulsate 29s infinite alternate;
+    }
+    @keyframes pulsate {
+        0% {transform: translateX(-2300px);}				
+          100% {transform: translateX(150px);}
+      }
+      .block5{
+        margin-top: 21px;
+        height: 1762px;
+      }
+      .block5 .services-grid{
+        display: grid;
+        grid-template-columns: 290px;
+        grid-column-gap: 41px;
+        grid-row-gap: 10px;
+        margin-top: 10px;
+    }
+    .block5 .services-grid .element button {
+        position: relative;
+        color: black;
+        background-color: white;
+        top: -71px;
+        right: 142px;
+    }
+    .block5 .services-grid .element .overlay {
+        width: 268px;
+        height:268px;
+    }
+    .block5 .services-grid .element{
+        height: 420px;
+        border: none;
+        position: relative;
+        right: 11px;
+    }
+    .block5 .services-grid .element .cover {
+        position: absolute;
+        width: 268px;
+        height: 268px;
+        margin: 23px;
+    }
+    .block5 .services-grid .element .overlay {
+        width: 268px;
+        height: 268px;
+        margin: 23px;
+    }
+    .block5 .services-grid .element .icon {
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        top: -94px;
+        right: -157px;
+    }
+    .block5 .services-grid .element .title {
+        position: absolute;
+        top: -140px;
+        right: -167px;
+        z-index: 2;
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+    }
+.rewiewsBlock h1 {
+    width: 290px;
+    height: 68px;
+    font-size: 29px;
+    text-align: center;
+}
+.rewContent h4{
+    font-size: 18px;
+    position: relative;
+    left: -55px;
+    top: -29px;
+}
+.rewContent{
+    right: 91px;
+    top: 49px;
+}
+.rewContent p{
+    font-size: 13px;
+    width: 290px;
+    height: 96px;
+    right: -101px;
+    top: -34px;
+}
+.rewBlock3 .img6 {
+    position: relative;
+    opacity: 0.6;
+    right: 454px;
+    top: 68px;
+    width: 100px;
+}
+.dot-container{
+    position: relative;
+    right: 6px;
+    top: -67px;
+}
+.rewPhoto1 img{
+    opacity: 0.6;
+    position: relative;
+    right: -359px;
+    top: 55px;
+    width: 100px;
+}
+.rewBlock3 .starsDiv{
+    display: none;
+}
+.rewBlock3 .img8, .img9{
+    display: none;
+}
+.block7{
+    margin-top: -150px;
+flex-direction: column;
+align-items: center;
+}
+.aboutUs h1 {
+    font-size: 29px;
+}
+.aboutUs p{
+    width: 290px;
+    height: 220px;
+    font-size: 16px;
+    position: relative;
+    top: 178px;
+}
+.block7 button{
+    position: relative;
+    top: 94px;
+}
+.slide2 {
+    position: relative;
+    top: -365px;
+}
+.carousel-inner .images {
+    width: 375px;
+    height: 189px;
+}
+.carousel-inner .images.carousel-item.active  .image_img1{
+    object-position: 0px -120px;
+}
+.carousel-inner .images.images.carousel-item .image_img2 {
+    object-position: 0px -77px;
+}
+.block8 {
+    background-repeat: no-repeat;
+    background-size: 548px;
+    background-position: left;
+}
+.block8 {
+    background-image: url(./images/map.png);
+    width: 1358px;
+    height: 431px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-box .footer-line{
+    display: none;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.link-logo{
+    width: 134px;
+    height: 67px;
+    position: relative;
+    top: -164px;
+    left: 227px;
+}
+.link-logo img{
+    width: 100%;
+    height: 100%;
+}
+.footer-grid{
+    position: relative;
+    left: -255px;
+    top: -87px;
+}
+footer p{
+    width: 204px;
+    height: 36px;
+    font-size: 15px
+}
+.inst-fb.inst{
+    right: 330px;
+    top: 197px;
+}
+.footer-icons a .inst-fb.fb{
+    top: 167px;
+    left: -257px;
+}
+}
