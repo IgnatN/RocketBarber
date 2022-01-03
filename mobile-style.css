@@ -61,6 +61,7 @@ button{
     top: -226px;
 }
 .menu__box{
+    position: fixed;
     width: 100%;
 }
 .second-container {
@@ -274,14 +275,21 @@ button.ourTeam{
     width: 290px;
     height: 96px;
     right: -101px;
-    top: -34px;
+    top: -50px;
 }
-.rewBlock3 .img6 {
+.rewBlock3 img{
     position: relative;
     opacity: 0.6;
-    right: 454px;
-    top: 68px;
+    right: 463px;
+    top: 76px;    
     width: 100px;
+}
+.rewBlock3 .img7{
+    display: none;
+}
+.mySlides .client{
+    position: relative;
+    top: -16px;
 }
 .dot-container{
     position: relative;
@@ -351,6 +359,11 @@ footer{
 }
 .footer-box .footer-line{
     display: none;
+}
+.pulse {
+    position: relative;
+    right: 398px;
+    top: -25px;
 }
 .footer-box{
     display: flex;
