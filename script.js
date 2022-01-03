@@ -285,3 +285,24 @@ document.querySelectorAll('#signUp').forEach(hrt => {
         window.location.href = 'https://ru.fresha.com/a/rocket-barbershop-chisinau-kishinyov-bd-renasterii-nationale-16-zthfvtq1/booking'
     })
 })
+
+const linksContainer = document.querySelector('.menu__box');
+
+linksContainer.addEventListener('click', (e) => {
+    if (e.target.matches('.menu__item')) {
+        e.preventDefault();
+        closeSideMenu();
+        window.location.href = e.target.href;
+    }
+});
+
+function closeSideMenu() {
+    const sideMenuToggle = document.querySelector('#menu__toggle');
+    sideMenuToggle.click();
+}
+
+let burgerBtn = document.querySelector('.hamburger-menu');
+let menuBox = document.querySelector('.menu__box')
+burgerBtn.addEventListener('click', ()=>{
+menuBox.classList.toggle('active')
+})
