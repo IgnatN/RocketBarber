@@ -679,7 +679,7 @@ position: relative;
     display: flex;
     flex-direction: column;
 }
-.rewBlock3 .img6{
+.rewBlock3 img{
     position: relative;
     right: 242px;
     top: 31px;
@@ -905,7 +905,7 @@ footer a:hover{
 .copyright a:hover{
     color: rgba(231, 111, 0, 1);
 }
-@media only screen and (max-width:1040px){
+@media only screen and (max-width:1024px){
 .menu__btn{
     display: block;
 }
@@ -946,11 +946,15 @@ button.ourTeam{
 .blockTeam p{
     position: relative;
     top: 31px;
-    right: -13px;
+    right: -13px
 }
 .photoTeam{
     width: 220px;
     height: 220px;
+}
+button.ourTeam{
+    top: 128px;
+    left: 76px;
 }
 
 .ourTeamImg{
@@ -979,8 +983,8 @@ button.ourTeam{
 }
 .pulse{
     position: relative;
-    right: 400px;
-    top: -25px;
+    right: 388px;
+    top: -8px;
 }
 .rewBlock3 .img8 {
     position: relative;
@@ -992,6 +996,7 @@ button.ourTeam{
     grid-template-columns: 180px 180px 180px 180px;
     margin-left: 100px;
 }
+
 .footer-box {
   
     display: grid;
