@@ -1,6 +1,6 @@
 @import"/style.css";
 
-@media only screen and (max-width:375px) {
+@media screen and (max-device-width: 430px) {
     *{
         padding: 0;
         margin: 0;
@@ -16,9 +16,11 @@
          top: 6px;
     }
     header .logo{
-        width: 60px;
+        width: 63px;
         position: relative;
-        right: 190px;
+        right: 21px;
+        top: 7px;
+        opacity: 1;
     }
 .carousel-item{
     width: 100%;
@@ -27,16 +29,20 @@
 .contacts {
     width: 100%;
     position: relative;
-    right:140px;
+    right: -18px;
 }
 img.vector-face{
-width: 68px;
+width: 17%;
+}
+.vector-welcome {
+    margin-top: 5%;
+    width: 84%;
 }
 .vector, .vectorMin, .line{
     display: none;
 }
 .image_img {
-    width: 400px;
+    width: 100%;
     height: 522px;
     object-fit: cover;
 }
@@ -56,47 +62,14 @@ width: 68px;
     position: relative;
     top: -316px;
 }
-button{
-    position: relative;
-    top: -226px;
+
+.bigNumbers {
+    gap: 17%;
+    margin-top: 8%;
 }
-.menu__box{
-    position: fixed;
-    width: 100%;
-}
-.second-container {
-    margin-top: 100px;
-    display: flex;
-    position: relative;
-    left: -350px;
-}
-.vector-welcome{
-    font-size: 25px;
-    width: 290px;
-}
-.active1 img{
-    width: 95px;
-}
-.active2 img{
-    width: 95px;
-}
-.active3 img{
-    width: 95px;
-}
-.active4 img{
-    width: 95px;
-}
-.bigNumbers{
-    gap: 45px;
-    position: relative;
-    right: -62px;
-}
-.numberContent p{
-   width: 135px;
-   height: 80px;
-font-size: 13px;
-position: relative;
-    right: -25px;
+.numberContent {
+    width: 37%;
+    margin: 0 0 5% 0;
 }
 .ourTeam h1{
     width: 231px;
@@ -152,15 +125,9 @@ button.ourTeam{
     margin-top: 5px;
 }
 .containersFlex{
-    width: 676px;
-    height: 439px;
-    gap: 10px;
-}
-.containerFlex{
-    gap: 10px;
     width: 100%;
-    height: 100%;
-    gap: 10px;
+    height: 439px;
+    gap: 3%;
 }
 .div1, .div3{
     display: flex;
@@ -188,37 +155,54 @@ button.ourTeam{
     height: 123px;
   }
   .containerFlex {
+      gap: 10px;
       padding-top: 0px;
     width: 2467px;
     height:388px;
     animation: pulsate 29s infinite alternate;
-    -moz-animation: pulsate 29s infinite alternate;
     }
     @keyframes pulsate {
         0% {transform: translateX(-2300px);}				
-          100% {transform: translateX(150px);}
+          100% {transform: translateX(0px);}
       }
+    
       .block5{
-        margin-top: 21px;
-        height: 1762px;
-      }
+          width: 76%;
+          display: flex;
+          margin: auto;
+        height: 1832px;   
+     }
       .block5 .services-grid{
-        display: grid;
-        grid-template-columns: 290px;
-        grid-column-gap: 41px;
-        grid-row-gap: 10px;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
     }
     .block5 .services-grid .element button {
         position: relative;
         color: black;
         background-color: white;
-        top: -71px;
-        right: 142px;
+        top: 304px;
+        right: -5px;    
+    }
+    .block5 .services-grid .element button a{
+        text-decoration: none;
+        color: black;
     }
     .block5 .services-grid .element .overlay {
         width: 268px;
         height:268px;
+    }
+    .block5 .services-grid .element.element-show {
+        opacity: 1;
+        transform: translateY(0%);
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .block5 .services-grid .element{
         height: 420px;
@@ -241,78 +225,80 @@ button.ourTeam{
         width: 65px;
         height: 65px;
         position: absolute;
-        top: -94px;
-        right: -157px;
+        top: -86px;
+        right: -172px;
     }
     .block5 .services-grid .element .title {
         position: absolute;
-        top: -140px;
-        right: -167px;
+        text-align: center;
+        width: 67%;
+        top: 45%;   
+        margin: auto;
+        right: 32px;
         z-index: 2;
         font-size: 22px;
         color: #ffffff;
         font-weight: 400;
+        }
+        .rewiewsBlock {
+            width:100%;
+    }
+    .minim-a{
+        width: 80%;
+    }
+    .rewiewsBlock h1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
         text-align: center;
     }
-.rewiewsBlock h1 {
-    width: 290px;
-    height: 68px;
-    font-size: 29px;
-    text-align: center;
+  .rewiewsContentDot {
+    position: absolute;
+    bottom: 33%;
 }
-.rewContent h4{
-    font-size: 18px;
-    position: relative;
-    left: -55px;
-    top: -29px;
-}
-.rewContent{
-    right: 91px;
-    top: 49px;
-}
-.rewContent p{
-    font-size: 13px;
-    width: 290px;
-    height: 96px;
-    right: -101px;
-    top: -50px;
-}
-.rewBlock3 img{
-    position: relative;
-    opacity: 0.6;
-    right: 463px;
-    top: 76px;    
-    width: 100px;
-}
-.rewBlock3 .img7{
-    display: none;
-}
-.mySlides .client{
-    position: relative;
-    top: -16px;
-}
-.dot-container{
-    position: relative;
-    right: 6px;
-    top: -67px;
-}
-.rewPhoto1 img{
-    opacity: 0.6;
-    position: relative;
-    right: -359px;
-    top: 55px;
-    width: 100px;
-}
-.rewBlock3 .starsDiv{
-    display: none;
-}
-.rewBlock3 .img8, .img9{
-    display: none;
-}
+    .mySlides p{
+        font-size: 13px;
+        line-height: 16px;
+        width: 100%;
+    }
+    .mySlides .client {
+        padding-top: 15%;
+    }
+    .mySlides h4{
+        font-size: 18px;
+    }
+    .rewImg1 {
+        left: 0%;
+        top: 20%;
+        opacity: 0.5;
+    }
+    .rewImg1 img{
+        width: 75%;
+    }
+    .rewImg2{
+        top: 20%;
+        left: 76%;
+        opacity: 0.5;
+    }
+    .rewImg5{
+        top: 14%;
+        left: 33%;
+    }
+    .rewImg2 img{
+        width: 95%;
+    }
+    .rewImg8, .rewImg4, .rewImg3, .rewImg7,.rewImg9, .rewImg6, .rewLogo{
+        display: none;
+    }
 .block7{
+    width: 70%;
+    margin: auto;
     margin-top: -150px;
-flex-direction: column;
-align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .aboutUs h1 {
     font-size: 29px;
@@ -326,14 +312,14 @@ align-items: center;
 }
 .block7 button{
     position: relative;
-    top: 94px;
+    top: 21%;
 }
 .slide2 {
     position: relative;
     top: -365px;
 }
 .carousel-inner .images {
-    width: 375px;
+    width:375px;
     height: 189px;
 }
 .carousel-inner .images.carousel-item.active  .image_img1{
@@ -343,19 +329,24 @@ align-items: center;
     object-position: 0px -77px;
 }
 .block8 {
+    width: 100%;
     background-repeat: no-repeat;
-    background-size: 548px;
+    background-size: 99%;
     background-position: left;
 }
-.block8 {
-    background-image: url(./images/map.png);
-    width: 1358px;
-    height: 431px;
+.block8 .pulse {
+width: 8px;
+height: 8px;
+position: relative;
+right: 2px;
+top: -18px;
 }
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    right: 21px;
 }
 .footer-box .footer-line{
     display: none;
@@ -381,27 +372,37 @@ footer{
     width: 100%;
     height: 100%;
     position: relative;
-    right: 57px;
+    right: 35px;
 }
 .footer-grid{
-    position: relative;
-    left: -255px;
-    top: -87px;
+    display: none;
 }
 .footer-box .footer-grid {
-    grid-template-columns: 245px 208px 144px 189px;
+ display: none;
 }
-footer p{
-    width: 204px;
-    height: 36px;
-    font-size: 15px
+.timeWork{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.inst-fb.inst{
-    right: 330px;
-    top: 197px;
+.footer-mobile{
+    width: 90%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
-.footer-icons a .inst-fb.fb{
-    top: 167px;
-    left: -257px;
+.timeWork h5, .location h5{
+    font-family: Roboto Condensed;
+    font-size: 25px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.copyright{
+    position: relative;
+    right: -20px;
 }
 }
