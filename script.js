@@ -126,12 +126,12 @@ empl4.showOurTeam();
 
 let title = document.querySelectorAll('h1');
 title.forEach(h1 => {
-    h1.style.width = 'auto';
+    h1.style.width = '100%';
+    h1.style.textAlign = 'center';
     h1.style.height = '53px';
     h1.style.fontFamily = "Roboto Condensed";
     h1.style.fontStyle = 'bold';
     h1.style.fontWeight = '700';
-    h1.style.lineHeight = '53px';
     h1.style.letterSpacing = '0.06em'
     h1.style.marginTop = '100px'
     h1.style.color = '#E6E6E6'
@@ -214,11 +214,10 @@ class Services {
         ouerServices.innerHTML += `
                                           <div class="element">
                                              <img src="${this.image}" alt="Haircut" class="cover">
-                                             <img src="${this.image}" alt="Haircut" class="cover">
                                                 <div class="overlay"></div>
                                              <img src="${this.vector}" alt="Haircut" class="icon">
                                                   <div class="title">${this.title}</div>
-                                                  <a href="${this.linkService}"><button>${this.button}</button></a>
+                                             <button><a href="${this.linkService} class="minim-a">${this.button}</a></button>
                                         </div>`
     }
 }
@@ -303,6 +302,14 @@ function closeSideMenu() {
 
 let burgerBtn = document.querySelector('.hamburger-menu');
 let menuBox = document.querySelector('.menu__box')
-burgerBtn.addEventListener('click', ()=>{
-menuBox.classList.toggle('active')
+burgerBtn.addEventListener('click', () => {
+    menuBox.classList.toggle('active')
 })
+
+let barMenu = document.querySelector('.bar-menu');
+let logRock = document.querySelector('.logo')
+barMenu.addEventListener('click', () => {
+    logRock.classList.toggle('logoOff')
+})
+
+////////////////////////////
