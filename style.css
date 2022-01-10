@@ -1,14 +1,18 @@
 @import"./mobile-style.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto+Condensed:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    
 }
 body{
     background: black;
-    overflow-x: hidden;
+    height: 100%;
+     overflow-x: hidden;
 }
 header{
     z-index: 999;
@@ -80,8 +84,9 @@ header .contacts a{
       #menu__toggle:checked ~ .menu__box {
         visibility: visible;
         right:0;
+        -webkit-backdrop-filter: blur(5px) contrast(60%); 
         backdrop-filter: blur(5px);
-      }
+    }
       .menu__btn {
         display: none;
         align-items: center;
@@ -95,8 +100,8 @@ header .contacts a{
       }
       .menu__box img{
           position: relative;
-        top: -10px;       
-         right: -33px;
+          top: -22px;       
+          right: -33px;
           width: 60px;
           height:30px;
           margin-bottom: 10px;
@@ -123,12 +128,12 @@ header .contacts a{
         position: fixed;
         visibility: hidden;
         top: -32px;   
-        width: 320px;
+        width: 100%;
         height: 720px;
         margin: 0;
         padding: 80px 0;
         list-style: none;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(5px);
         box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);      
       }
       .menu__box a{
@@ -165,30 +170,6 @@ header .contacts a{
       .menu__box .tel{
         margin-top: 151px;
       }
-@media (max-width:1569px){ 
-  
-    header .navigation {
-        padding-left: 30px
-    }
-    header .navigation .navigation-items a{
-        margin-left:10px ;
-    }
-}
-@media (max-width:1328px) {
-    .header{
-        width: 70%;
-        padding: 10px 150px;
-    }
-    header .navigation {
-        padding-left: 15px
-    }
-    header .navigation .navigation-items a{
-        margin-left:10px ;
-    }
-    .contacts{
-        gap:5px
-    }
-}
 .carousel-item{
     width: 100%;
     height:1078px;
@@ -230,7 +211,7 @@ header .contacts a{
     top: 87.1%;
     right: 50.2%;
     flex: 100%;
-    animation: identifier 2s infinite
+    animation: identifier 2s infinite;
 
 }
 .vectorMin{
@@ -254,62 +235,68 @@ header .contacts a{
     right:50.7% ;
 }
 .second-container{
+    width: 100%;
     margin-top: 100px;
-    display: flex;
 }
 .second-container-welcome{
+    width: 100%;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: center; */
 }
 .div-welcome{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 130px;
+    margin: 0 auto;
+    /* justify-content: center; */
 }
-.vector-welcome {
-    margin: 6% 0 15% 0;
+.vector-face{
+    width: 10%;
+}
+.vector-welkome{
+    margin-top: 4%;
+}
+.numberContent{
+    width:21%;
     display: flex;
-    flex-wrap: wrap;
-}
-.bigNumbers{
-    width: 561px;
-    height: 576.45px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20%;
-}
-.numberContent  {
-    width: 188px;
-    height: 170px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 150px;
-    line-height: 176px;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    margin: 0 0 10% 0;
     opacity: 0;
     transition: scale(0.1);
     transition: all 1s ease-in-out;
 }
 .numberContent h5{
+    margin: 10%;
     font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;  
     line-height: 21px;
-    text-align: center;
-    color: #E6E6E6;
+line-height: 21px;  
+    line-height: 21px;
+line-height: 21px;  
 }
 .numberContent p{
-    width: 210px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
     text-align: center;
-    color: #E6E6E6;
+    font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 18px;
+}
+.bigNumbers{
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
 }
  .active1{
     opacity: 1;
@@ -350,14 +337,12 @@ header .contacts a{
     width:100%;
     height: 100%;
     }
-    
     .photoTeam{
         width: 265px;
         height: 264px;
         position: relative;
     }
     .ourTeamImg {
-        /* margin-top: 40px; */
         width: 100%; 
         height: 100%;
         border-radius: 7px;
@@ -374,6 +359,7 @@ header .contacts a{
     .photoTeam:hover .instIcon{
         opacity: 1;
     }
+
     button.ourTeam{
         opacity: 0;
        background-color:transparent;
@@ -400,6 +386,7 @@ header .contacts a{
     line-height: 19px;
     text-align: center;
 }
+
 .galleryBlock{
   width: 100%;
   height: 100%;
@@ -407,16 +394,17 @@ header .contacts a{
   display: flex;
  flex-direction: column;
  align-items: center;
+ overflow: hidden;
 }
 .galleryBlock h1{
     font-size: 45px;
   margin-bottom: 30px;
 }
 .containersFlex{
-  width: 2467px;
+    width: 100%;
   height: 749px;
   display: flex;
-  gap: 27px;
+  gap: 7%;
 }
 .containerFlex {
   width: 100%;
@@ -425,6 +413,11 @@ header .contacts a{
     align-items: center;
     justify-content: center;
     gap: 27px;
+    animation: pulsate 20s infinite alternate;
+}
+@keyframes pulsate {
+    0% {transform: translateX(-3780px);}				
+      100% {transform: translateX(0px);}
   }
   .photo1, .photo2 {
     width: 100%;
@@ -457,17 +450,9 @@ header .contacts a{
   width: 450px;
   height: 260px;
 }
-.containerFlex {
-width: 2467px;
-height: 100%;
-animation: pulsate 20s infinite alternate;
--moz-animation: pulsate 20s infinite alternate;
-}
-@keyframes pulsate {
-    0% {transform: translateX(-3850px);}				
-      100% {transform: translateX(200px);}
-  }
   .block5{
+      width: 80%;
+      margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -523,8 +508,10 @@ animation: pulsate 20s infinite alternate;
 }
 .block5 .services-grid .element .title{
     position: absolute;
+    right: 17%;
     z-index: 2;
-    width: 606px;
+    width: 64%;
+    margin: auto;
     margin-top: 312px;
     font-size: 36px;
     color: #ffffff;
@@ -534,7 +521,6 @@ animation: pulsate 20s infinite alternate;
 .block5 .services-grid .element button{
     position: absolute;
     z-index: 2;
-    margin: 384px 203px;
     color: #ffffff;
     font-size: 20px;
     font-weight: bold;
@@ -542,99 +528,116 @@ animation: pulsate 20s infinite alternate;
     width: 200px;
     height: 60px;
     border: 1px #ffffff solid;
+    top: 67%;
+    right: 34%;
+}
+.block5 .services-grid .element button a{
+    text-decoration: none;
+    color: white;
 }
 .block5 .services-grid .element button:hover{
     background-color: white;
+}
+.containerGrid{
+    width: 100%;
+}
+.block5 .services-grid .element button:hover a{
     color: black;
 }
 .rewiewsBlock{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px 0px;
+    width: 80%;
+    margin: auto;
     height: 625px;
     color: white;
-}
-.divRewiews{
-    display: flex;
-    flex-direction: row;
-    width: 1094px;
-    height: 432px;
-
-}
-.starsDiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 68px;
-    height: 18px;
-    color: black;
-    background-color: white;
-    border-radius: 7px;
-    z-index: 1;
-}
-.star{
-    display: flex;
-    align-items: center;
-}
-.rewBlock1 .starsDiv.stars1{
     position: relative;
-    top: 39px;
-    right: -70px;
 }
-.rewBlock1{
-    margin-right: 187px;
+.rewiewsBlock h1{
+    margin-bottom: 8%;
 }
-.rewBlock1 .rewPhoto2{
-    position: relative;
-    left: 98px;
-    top: 22px;
-}
-.rewBlock1 .rewPhoto3{
-    position: relative;
-    left: 121px;
-    top: 86px;
-}
-.rewBlock2{
-    display: flex;
-    width: 600px;
-    height: 314px;
-    margin-right: 187px;
-}
- .img9{
-    position: relative;
-    right: 255px;
-    top: 342px;
-}
-.rewBlock2 .rewContent .img5 .starsDiv.stars4{
-    position: relative;
-    top: -100px;
-    right: -81px;
-}
-.imgSymbol{
+.mySlides{
     display: flex;
     flex-direction: column;
-    position: relative;
-    right: 74px;
+    justify-content: center;
+    text-align: center;  
 }
-.rewContent{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    right: 60px;
+.mySlides h4{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
 }
-.slideshow-container {
-    position: relative;
-  }
-  .mySlides {
-    display: none;
+.mySlides p{
+    width: 39%;
+    margin: auto;
+    height: 72px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+}
+.mySlides .client{
+    padding-top: 4%;
+}
+.rewLogo{
+    position: absolute;
+    top: 23%;
+    right: 65%;
+}
+.rewImg1 {
+    position: absolute;
+    left: 17%;
+    top: 8%;
+}
+.rewImg2{
+    position: absolute;
+    top: 31%;
+    left: 21%;
+}
+.rewImg3{
+    position: absolute;
+    top: 48%;
+    left: 22%;
+}
+.rewImg4{
+    position: absolute;
+    top: 8%;
+    left: 31%;
+}
+.rewImg5{
+    position: absolute;
+    top: 9%;
+    left: 46%;
+}
+.rewImg6{
+    position: absolute;
+    top: 13%;
+    left: 72%;
+}
+.rewImg7{
+    position: absolute;
+    top: 28%;
+    left: 81%;
+}
+.rewImg8{
+    position: absolute;
+    top: 44%;
+    left: 76%;
+}
+.rewImg9{
+    position: absolute;
+    bottom: 34%;
+    right: 29%;
+}
+.mySlides {
+    display:none;
     text-align: center;
   }
 .dot-container {
     text-align: center;
-    position: relative;
-    right: -15px;
-    top: -100px;
   }
   .dot {
     cursor: pointer;
@@ -645,78 +648,11 @@ animation: pulsate 20s infinite alternate;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
-  
-.rewContent h1{
-    margin: 100px 0px 76px 0px;
-}
-.rewContent h4 {
-   width: 590px; 
-font-family: Roboto Condensed;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 42px;
-text-align: center;
-}
-.rewContent p{
-    width: 586px;
-height: 72px;
-font-family: Montserrat;
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 18px;
-text-align: center;
-position: relative;
-    right: 68px;
-}
-.rewContent h4{
-    position: relative;
-    left: -79px;
-    top: -6px;
-}
-.rewBlock3{
-    display: flex;
-    flex-direction: column;
-}
-.rewBlock3 img{
-    position: relative;
-    right: 242px;
-    top: 31px;
-}
-.rewBlock3 .img7{
-    position: relative;
-    right: 130px;
-    top: 21px;
-}
-.rewBlock3 .img8{
-    position: relative;
-    top: 26px;
-    right: 202px;
-}
-.rewBlock3 .starsDiv.stars2 {
-    position: relative;
-    top: 71px;
-    left: -260px;
-}
-.rewBlock3 .starsDiv.stars3{
-    position: relative;
-    top: -82px;
-    right: 117px;
-}
-.rewPhoto2{
-    position: relative;
-    right: -83px;
-}
-.rewPhoto3{
-    position: relative;
-    right: -83px;
-}
-.rewContent .img5{
-    position: relative;
-    right: -178px;
-}
 
+  .rewiewsContentDot{
+    position: absolute;
+     bottom: 37%;
+}
                                                 /* block7 */
 
 .block7{
@@ -902,10 +838,13 @@ footer a:hover{
     color: rgba(231, 111, 0, 1);
     text-decoration: none;
 }
+.footer-mobile{
+    display: none;
+}
 .copyright a:hover{
     color: rgba(231, 111, 0, 1);
 }
-@media only screen and (max-width:1024px){
+@media  screen and (max-width:1024px){
 .menu__btn{
     display: block;
 }
@@ -922,10 +861,7 @@ header .contacts{
 .vector{
     right: 49.9%;
 }
-.second-container-welcome{
-    position: relative;
-    right: -223px;
-}
+
 .second-container-welcome .img-second-block{
     display: none;
 }
@@ -956,7 +892,10 @@ button.ourTeam{
     top: 128px;
     left: 76px;
 }
-
+.containersFlex{
+    width: 100%;
+    gap: 60%;
+}
 .ourTeamImg{
     width: 100%;
     height: 100%;
@@ -986,11 +925,7 @@ button.ourTeam{
     right: 388px;
     top: -8px;
 }
-.rewBlock3 .img8 {
-    position: relative;
-    top: 1px;
-    right: 264px;
-}
+
 .footer-box .footer-grid{
     grid-template-columns: 180px 180px 180px 180px;
     margin-left: 46px;
@@ -1000,15 +935,15 @@ button.ourTeam{
     margin: auto auto auto 164px;
 }
 }
-@media only screen and (max-width:1280px){
+@media  screen and (max-width:1550px){
     header{
-        padding: 20px 57px;
+        padding: 20px 70px;
     }
     .contacts {
         gap: 26px;
     }
     header .navigation {
-        padding-left: 169px;
+        padding-left: 31px;
     }
     .vector{
         right: 49.9%;
@@ -1016,26 +951,23 @@ button.ourTeam{
     .vectorMin{
         right:  50.60%;
     }
-    .second-container-welcome .img-second-block{
-        width: 676px;
-        height: 692px;
-    }
-    .div-welcome {
-        padding-left: 37px;
-    }
-    .vector-face{
-        width: 73px;
-    }
     .vector-welcome{
-        width: 470px;
+        margin-top: 2%;
+        width: 70%;
+    }
+    .img-second-block{
+        width: 50%;
+        height: 100%;
     }
     .bigNumbers {
-        width: 484px;
-        height: 490px;
-        margin-top: -93px;
+        gap: 19%;
+        margin-top: 7%;
+    }.numberContent img{
+        width: 78%;
     }
-    .numberContent img{
-        width: 127px;
+    .numberContent {
+        width: 21%;
+        margin: 0 0 5% 0;
     }
     .teamBlocks {
         gap: 37px;
@@ -1045,10 +977,63 @@ button.ourTeam{
         height: 100%;
         margin-top: 0px;
     }
-    .min-img{
-        position: relative;
-        top: 0px;
-        left: 0px;
+   .containersFlex{
+    gap:60%;
+   }
+      .containerFlex{
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        gap:2%;
+    }
+    .mySlides p {
+        width: 47%;
+    }
+    .rewiewsContentDot{
+        position: absolute;
+         bottom: 33%;
+    }
+    .rewLogo{
+        top: 28%;
+        right: 73%;
+    }
+    .rewImg1 {
+        left: 3%;
+        top: 17%;
+    }
+    .rewImg2{
+        top: 35%;
+        left: 11%;
+    }
+    .rewImg3{
+        top: 50%;
+        left: 12%;
+    }
+    .rewImg4{ 
+        top: 16%;
+        left: 20%;
+    }
+    .rewImg5{
+        top: 14%;
+    }
+    .rewImg6{
+        top: 16%;
+    left: 74%;
+    }
+    .rewImg7{
+        position: absolute;
+        top: 28%;
+        left: 81%;
+    }
+    .rewImg8{
+        position: absolute;
+        top: 44%;
+        left: 76%;
+    }
+    .rewImg9{
+        position: absolute;
+        bottom: 34%;
+        right: 29%;
     }
     .block5 .services-grid {
         grid-column-gap: 26px;
@@ -1062,4 +1047,7 @@ button.ourTeam{
         grid-template-columns: 250px 250px 250px 250px;
         margin-left: 79px;
     }
+}
+.logoOff{
+    display: none;
 }
